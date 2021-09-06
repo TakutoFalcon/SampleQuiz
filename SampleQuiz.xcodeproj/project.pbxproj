@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B9AB3314AAECA151D881DC08 /* Pods_SampleQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018071B660CA5AA3A6CC3BCF /* Pods_SampleQuiz.framework */; };
-		F43B654926E347C60080EB8C /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F43B654826E347C60080EB8C /* sample.mp3 */; };
+		F43B654926E347C60080EB8C /* correctSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F43B654826E347C60080EB8C /* correctSound.mp3 */; };
 		F43B654B26E41F1F0080EB8C /* Quiz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F43B654A26E41F1F0080EB8C /* Quiz.mp3 */; };
-		F43B654D26E41F9E0080EB8C /* bquiz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F43B654C26E41F9E0080EB8C /* bquiz.mp3 */; };
-		F44406D926E5357B00183DF4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44406D826E5357B00183DF4 /* File.swift */; };
+		F43B654D26E41F9E0080EB8C /* IncorrectSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F43B654C26E41F9E0080EB8C /* IncorrectSound.mp3 */; };
+		F44406DB26E536E700183DF4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44406DA26E536E700183DF4 /* File.swift */; };
 		F456EEC526DEA0B60012CF93 /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = F456EEC326DEA0B50012CF93 /* correct.png */; };
 		F456EEC626DEA0B60012CF93 /* incorrect.png in Resources */ = {isa = PBXBuildFile; fileRef = F456EEC426DEA0B50012CF93 /* incorrect.png */; };
 		F456EEC826DEA6180012CF93 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456EEC726DEA6180012CF93 /* SelectViewController.swift */; };
@@ -33,10 +33,10 @@
 		018071B660CA5AA3A6CC3BCF /* Pods_SampleQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCE1FF841ED37EA090A96A2 /* Pods-SampleQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleQuiz.release.xcconfig"; path = "Target Support Files/Pods-SampleQuiz/Pods-SampleQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		ED6652002FB2A1032030F654 /* Pods-SampleQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleQuiz.debug.xcconfig"; path = "Target Support Files/Pods-SampleQuiz/Pods-SampleQuiz.debug.xcconfig"; sourceTree = "<group>"; };
-		F43B654826E347C60080EB8C /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
+		F43B654826E347C60080EB8C /* correctSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correctSound.mp3; sourceTree = "<group>"; };
 		F43B654A26E41F1F0080EB8C /* Quiz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Quiz.mp3; sourceTree = "<group>"; };
-		F43B654C26E41F9E0080EB8C /* bquiz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bquiz.mp3; sourceTree = "<group>"; };
-		F44406D826E5357B00183DF4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		F43B654C26E41F9E0080EB8C /* IncorrectSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IncorrectSound.mp3; sourceTree = "<group>"; };
+		F44406DA26E536E700183DF4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		F456EEC326DEA0B50012CF93 /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct.png; sourceTree = "<group>"; };
 		F456EEC426DEA0B50012CF93 /* incorrect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = incorrect.png; sourceTree = "<group>"; };
 		F456EEC726DEA6180012CF93 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
@@ -114,9 +114,9 @@
 				F46779F026DE3F900046CF58 /* quiz1.csv */,
 				F46779EE26DE3DC50046CF58 /* ScoreViewController.swift */,
 				F46779EC26DE3D630046CF58 /* QuizViewController.swift */,
-				F44406D826E5357B00183DF4 /* File.swift */,
-				F43B654C26E41F9E0080EB8C /* bquiz.mp3 */,
-				F43B654826E347C60080EB8C /* sample.mp3 */,
+				F44406DA26E536E700183DF4 /* File.swift */,
+				F43B654C26E41F9E0080EB8C /* IncorrectSound.mp3 */,
+				F43B654826E347C60080EB8C /* correctSound.mp3 */,
 				F43B654A26E41F1F0080EB8C /* Quiz.mp3 */,
 				F456EEC926DEB2BC0012CF93 /* quiz2.csv */,
 				F456EECB26DEB5030012CF93 /* quiz3.csv */,
@@ -199,12 +199,12 @@
 			files = (
 				F459636526E1594C0027F0B2 /* launchImageView.png in Resources */,
 				F43B654B26E41F1F0080EB8C /* Quiz.mp3 in Resources */,
-				F43B654926E347C60080EB8C /* sample.mp3 in Resources */,
+				F43B654926E347C60080EB8C /* correctSound.mp3 in Resources */,
 				F456EECA26DEB2BC0012CF93 /* quiz2.csv in Resources */,
 				F456EEC526DEA0B60012CF93 /* correct.png in Resources */,
 				F456EEC626DEA0B60012CF93 /* incorrect.png in Resources */,
 				F46779E526DE3BD90046CF58 /* LaunchScreen.storyboard in Resources */,
-				F43B654D26E41F9E0080EB8C /* bquiz.mp3 in Resources */,
+				F43B654D26E41F9E0080EB8C /* IncorrectSound.mp3 in Resources */,
 				F46779E226DE3BD90046CF58 /* Assets.xcassets in Resources */,
 				F46779E026DE3BD50046CF58 /* Main.storyboard in Resources */,
 				F46779F126DE3F900046CF58 /* quiz1.csv in Resources */,
@@ -263,7 +263,7 @@
 			files = (
 				F46779DD26DE3BD50046CF58 /* ViewController.swift in Sources */,
 				F46779D926DE3BD50046CF58 /* AppDelegate.swift in Sources */,
-				F44406D926E5357B00183DF4 /* File.swift in Sources */,
+				F44406DB26E536E700183DF4 /* File.swift in Sources */,
 				F46779EF26DE3DC50046CF58 /* ScoreViewController.swift in Sources */,
 				F46779DB26DE3BD50046CF58 /* SceneDelegate.swift in Sources */,
 				F456EEC826DEA6180012CF93 /* SelectViewController.swift in Sources */,

@@ -18,8 +18,8 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var answerButton4: UIButton!
     @IBOutlet weak var judgeImageView: UIImageView!
     
-    var player0:AVAudioPlayer?
-    var player1:AVAudioPlayer?
+    var correctSound:AVAudioPlayer?
+    var incorrectSound:AVAudioPlayer?
     var audioPlayerInstance : AVAudioPlayer! = nil
     var bannerView: GADBannerView!
     var csvArray: [String] = []
@@ -31,9 +31,9 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = Bundle.main.bundleURL.appendingPathComponent("sample.mp3")
+        let url = Bundle.main.bundleURL.appendingPathComponent("correctSound.mp3")
         do {
-            try player0 = AVAudioPlayer(contentsOf: url)
+            try correctSound = AVAudioPlayer(contentsOf: url)
         } catch {
             print("Error")
         }
@@ -48,7 +48,7 @@ class QuizViewController: UIViewController {
         
         csvArray = loadCSV(fileName: "quiz\(selectLebel)")
         csvArray.shuffle()
-            
+        
         quizArray = csvArray[quizCount].components(separatedBy: ",")
         
         quizNumberLabel.text = "第\(quizCount + 1)問"
@@ -80,17 +80,22 @@ class QuizViewController: UIViewController {
     
     @IBAction func btnAction(sender: UIButton) {
         if sender.tag == Int(quizArray[1]){
-            player0!.play()
+            let url = Bundle.main.bundleURL.appendingPathComponent("correctSound.mp3")
+            do {
+                try correctSound = AVAudioPlayer(contentsOf: url)
+            } catch {
+                print("Error")
+            }
+            correctSound!.play()
             print("正解")
             correctCount += 1
             judgeImageView.image = UIImage(named: "correct")
         } else {
-            let soundURL = Bundle.main.url(forResource: "bquiz", withExtension: "mp3")
+            let url = Bundle.main.bundleURL.appendingPathComponent("IncorrectSound.mp3")
             do {
-                player1 = try AVAudioPlayer(contentsOf: soundURL!)
-                player1?.play()
+                try incorrectSound = AVAudioPlayer(contentsOf: url)
             } catch {
-               print("error")
+                print("Error")
             }
             print("不正解")
             judgeImageView.image = UIImage(named: "incorrect")
@@ -138,10 +143,10 @@ class QuizViewController: UIViewController {
         }
         return csvArray
     }
-
+    
     func addBannerViewToView(_ bannerview:GADBannerView){
         bannerview.translatesAutoresizingMaskIntoConstraints = false
-    view.addSubview(bannerView)
+        view.addSubview(bannerView)
         view.addConstraints(
             [NSLayoutConstraint(item: bannerview,
                                 attribute: .bottom,
@@ -160,13 +165,13 @@ class QuizViewController: UIViewController {
             ])
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

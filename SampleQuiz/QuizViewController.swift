@@ -31,13 +31,6 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = Bundle.main.bundleURL.appendingPathComponent("correctSound.mp3")
-        do {
-            try correctSound = AVAudioPlayer(contentsOf: url)
-        } catch {
-            print("Error")
-        }
-        
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         bannerView.adUnitID = "ca-app-pub-3940256899942544/2934735716"
         bannerView.rootViewController = self
@@ -83,10 +76,10 @@ class QuizViewController: UIViewController {
             let url = Bundle.main.bundleURL.appendingPathComponent("correctSound.mp3")
             do {
                 try correctSound = AVAudioPlayer(contentsOf: url)
+                correctSound!.play()
             } catch {
                 print("Error")
             }
-            correctSound!.play()
             print("正解")
             correctCount += 1
             judgeImageView.image = UIImage(named: "correct")
@@ -94,6 +87,7 @@ class QuizViewController: UIViewController {
             let url = Bundle.main.bundleURL.appendingPathComponent("IncorrectSound.mp3")
             do {
                 try incorrectSound = AVAudioPlayer(contentsOf: url)
+                incorrectSound!.play()
             } catch {
                 print("Error")
             }
@@ -164,14 +158,4 @@ class QuizViewController: UIViewController {
                                 constant: 0)
             ])
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

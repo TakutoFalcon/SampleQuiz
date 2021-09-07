@@ -73,23 +73,25 @@ class QuizViewController: UIViewController {
     
     @IBAction func btnAction(sender: UIButton) {
         if sender.tag == Int(quizArray[1]){
-            let url = Bundle.main.bundleURL.appendingPathComponent("correctSound.mp3")
+            if let soundURL = Bundle.main.url(forResource: "correctSound", withExtension: "mp3") {
             do {
-                try correctSound = AVAudioPlayer(contentsOf: url)
-                correctSound!.play()
+                correctSound = try AVAudioPlayer(contentsOf: soundURL)
+                correctSound?.play()
             } catch {
-                print("Error")
+                print("error")
             }
+          }
             print("正解")
             correctCount += 1
             judgeImageView.image = UIImage(named: "correct")
         } else {
-            let url = Bundle.main.bundleURL.appendingPathComponent("IncorrectSound.mp3")
-            do {
-                try incorrectSound = AVAudioPlayer(contentsOf: url)
-                incorrectSound!.play()
-            } catch {
-                print("Error")
+            if let soundURL = Bundle.main.url(forResource: "IncorrectSound", withExtension: "mp3") {
+                do {
+                    incorrectSound = try AVAudioPlayer(contentsOf: soundURL)
+                    incorrectSound?.play()
+                } catch {
+                    print("error")
+                }
             }
             print("不正解")
             judgeImageView.image = UIImage(named: "incorrect")

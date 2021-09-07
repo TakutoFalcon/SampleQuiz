@@ -72,15 +72,15 @@ class QuizViewController: UIViewController {
     }
     
     @IBAction func btnAction(sender: UIButton) {
-        if sender.tag == Int(quizArray[1]){
+        if sender.tag == Int(quizArray[1]) {
             if let soundURL = Bundle.main.url(forResource: "correctSound", withExtension: "mp3") {
-            do {
-                correctSound = try AVAudioPlayer(contentsOf: soundURL)
-                correctSound?.play()
-            } catch {
-                print("error")
+                do {
+                    correctSound = try AVAudioPlayer(contentsOf: soundURL)
+                    correctSound?.play()
+                } catch {
+                    print("error")
+                }
             }
-          }
             print("正解")
             correctCount += 1
             judgeImageView.image = UIImage(named: "correct")

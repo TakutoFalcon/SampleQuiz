@@ -72,7 +72,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F44CB3AA26E76DD100274C03 /* Viewcontroller */ = {
+		F44CB3AA26E76DD100274C03 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				F46779DC26DE3BD50046CF58 /* ViewController.swift */,
@@ -80,35 +80,35 @@
 				F46779EE26DE3DC50046CF58 /* ScoreViewController.swift */,
 				F46779EC26DE3D630046CF58 /* QuizViewController.swift */,
 			);
-			path = Viewcontroller;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
-		F44CB3AB26E76E0D00274C03 /* StoryBoard */ = {
+		F44CB3AB26E76E0D00274C03 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				F46779DE26DE3BD50046CF58 /* Main.storyboard */,
 				F46779E326DE3BD90046CF58 /* LaunchScreen.storyboard */,
 			);
-			path = StoryBoard;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		F44CB3AC26E76E2C00274C03 /* Csv */ = {
+		F44CB3AC26E76E2C00274C03 /* CSV */ = {
 			isa = PBXGroup;
 			children = (
 				F46779F026DE3F900046CF58 /* quiz1.csv */,
 				F456EEC926DEB2BC0012CF93 /* quiz2.csv */,
 				F456EECB26DEB5030012CF93 /* quiz3.csv */,
 			);
-			path = Csv;
+			path = CSV;
 			sourceTree = "<group>";
 		};
-		F44CB3AD26E76E4C00274C03 /* sound */ = {
+		F44CB3AD26E76E4C00274C03 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
 				F43B654C26E41F9E0080EB8C /* IncorrectSound.mp3 */,
 				F43B654826E347C60080EB8C /* correctSound.mp3 */,
 			);
-			path = sound;
+			path = Sound;
 			sourceTree = "<group>";
 		};
 		F456EEC226DEA0B50012CF93 /* Image */ = {
@@ -143,10 +143,10 @@
 			isa = PBXGroup;
 			children = (
 				F456EEC226DEA0B50012CF93 /* Image */,
-				F44CB3AD26E76E4C00274C03 /* sound */,
-				F44CB3AC26E76E2C00274C03 /* Csv */,
-				F44CB3AB26E76E0D00274C03 /* StoryBoard */,
-				F44CB3AA26E76DD100274C03 /* Viewcontroller */,
+				F44CB3AD26E76E4C00274C03 /* Sound */,
+				F44CB3AC26E76E2C00274C03 /* CSV */,
+				F44CB3AB26E76E0D00274C03 /* Storyboard */,
+				F44CB3AA26E76DD100274C03 /* ViewController */,
 				F46779D826DE3BD50046CF58 /* AppDelegate.swift */,
 				F46779DA26DE3BD50046CF58 /* SceneDelegate.swift */,
 				F46779E126DE3BD90046CF58 /* Assets.xcassets */,

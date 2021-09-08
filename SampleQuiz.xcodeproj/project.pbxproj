@@ -10,6 +10,12 @@
 		B9AB3314AAECA151D881DC08 /* Pods_SampleQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018071B660CA5AA3A6CC3BCF /* Pods_SampleQuiz.framework */; };
 		F43B654926E347C60080EB8C /* correctSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F43B654826E347C60080EB8C /* correctSound.mp3 */; };
 		F43B654D26E41F9E0080EB8C /* IncorrectSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F43B654C26E41F9E0080EB8C /* IncorrectSound.mp3 */; };
+		F44CB3B826E835D300274C03 /* mikey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F44CB3B026E835D100274C03 /* mikey.mp3 */; };
+		F44CB3B926E835D300274C03 /* ken.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F44CB3B126E835D100274C03 /* ken.mp3 */; };
+		F44CB3BA26E835D300274C03 /* kazutora.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F44CB3B226E835D100274C03 /* kazutora.mp3 */; };
+		F44CB3BB26E835D300274C03 /* mituya.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F44CB3B326E835D200274C03 /* mituya.mp3 */; };
+		F44CB3BC26E835D300274C03 /* kenkajyoto.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F44CB3B426E835D200274C03 /* kenkajyoto.mp3 */; };
+		F44CB3BD26E835D300274C03 /* tihuyu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F44CB3B526E835D200274C03 /* tihuyu.mp3 */; };
 		F456EEC526DEA0B60012CF93 /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = F456EEC326DEA0B50012CF93 /* correct.png */; };
 		F456EEC626DEA0B60012CF93 /* incorrect.png in Resources */ = {isa = PBXBuildFile; fileRef = F456EEC426DEA0B50012CF93 /* incorrect.png */; };
 		F456EEC826DEA6180012CF93 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456EEC726DEA6180012CF93 /* SelectViewController.swift */; };
@@ -33,6 +39,12 @@
 		ED6652002FB2A1032030F654 /* Pods-SampleQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleQuiz.debug.xcconfig"; path = "Target Support Files/Pods-SampleQuiz/Pods-SampleQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		F43B654826E347C60080EB8C /* correctSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correctSound.mp3; sourceTree = "<group>"; };
 		F43B654C26E41F9E0080EB8C /* IncorrectSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IncorrectSound.mp3; sourceTree = "<group>"; };
+		F44CB3B026E835D100274C03 /* mikey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mikey.mp3; sourceTree = "<group>"; };
+		F44CB3B126E835D100274C03 /* ken.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ken.mp3; sourceTree = "<group>"; };
+		F44CB3B226E835D100274C03 /* kazutora.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kazutora.mp3; sourceTree = "<group>"; };
+		F44CB3B326E835D200274C03 /* mituya.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mituya.mp3; sourceTree = "<group>"; };
+		F44CB3B426E835D200274C03 /* kenkajyoto.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kenkajyoto.mp3; sourceTree = "<group>"; };
+		F44CB3B526E835D200274C03 /* tihuyu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tihuyu.mp3; sourceTree = "<group>"; };
 		F456EEC326DEA0B50012CF93 /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct.png; sourceTree = "<group>"; };
 		F456EEC426DEA0B50012CF93 /* incorrect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = incorrect.png; sourceTree = "<group>"; };
 		F456EEC726DEA6180012CF93 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +117,12 @@
 		F44CB3AD26E76E4C00274C03 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				F44CB3B126E835D100274C03 /* ken.mp3 */,
+				F44CB3B026E835D100274C03 /* mikey.mp3 */,
+				F44CB3B226E835D100274C03 /* kazutora.mp3 */,
+				F44CB3B426E835D200274C03 /* kenkajyoto.mp3 */,
+				F44CB3B326E835D200274C03 /* mituya.mp3 */,
+				F44CB3B526E835D200274C03 /* tihuyu.mp3 */,
 				F43B654C26E41F9E0080EB8C /* IncorrectSound.mp3 */,
 				F43B654826E347C60080EB8C /* correctSound.mp3 */,
 			);
@@ -223,15 +241,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44CB3BA26E835D300274C03 /* kazutora.mp3 in Resources */,
 				F459636526E1594C0027F0B2 /* launchImageView.png in Resources */,
 				F43B654926E347C60080EB8C /* correctSound.mp3 in Resources */,
 				F456EECA26DEB2BC0012CF93 /* quiz2.csv in Resources */,
+				F44CB3BB26E835D300274C03 /* mituya.mp3 in Resources */,
 				F456EEC526DEA0B60012CF93 /* correct.png in Resources */,
 				F456EEC626DEA0B60012CF93 /* incorrect.png in Resources */,
+				F44CB3BC26E835D300274C03 /* kenkajyoto.mp3 in Resources */,
 				F46779E526DE3BD90046CF58 /* LaunchScreen.storyboard in Resources */,
 				F43B654D26E41F9E0080EB8C /* IncorrectSound.mp3 in Resources */,
+				F44CB3B926E835D300274C03 /* ken.mp3 in Resources */,
 				F46779E226DE3BD90046CF58 /* Assets.xcassets in Resources */,
 				F46779E026DE3BD50046CF58 /* Main.storyboard in Resources */,
+				F44CB3B826E835D300274C03 /* mikey.mp3 in Resources */,
+				F44CB3BD26E835D300274C03 /* tihuyu.mp3 in Resources */,
 				F46779F126DE3F900046CF58 /* quiz1.csv in Resources */,
 				F456EECC26DEB5030012CF93 /* quiz3.csv in Resources */,
 			);

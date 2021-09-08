@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SelectViewController: UIViewController {
     @IBOutlet weak var level1Button: UIButton!
@@ -13,6 +14,9 @@ class SelectViewController: UIViewController {
     @IBOutlet weak var level3Button: UIButton!
     
     var selectTag = 0
+    var mituyasound:AVAudioPlayer?
+    var kazutorasound:AVAudioPlayer?
+    var chihuyusound:AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +42,39 @@ class SelectViewController: UIViewController {
         print(sender.tag)
         selectTag = sender.tag
         performSegue(withIdentifier: "toQuizVC", sender: nil)
+    }
+    
+    @IBAction func btnAction(sender: UIButton) {
+        if let soundURL = Bundle.main.url(forResource: "mituya", withExtension: "mp3") {
+            do {
+                mituyasound = try AVAudioPlayer(contentsOf: soundURL)
+                mituyasound?.play()
+            } catch {
+                print("error")
+            }
+        }
+    }
+    
+    @IBAction func btnAction2(sender: UIButton) {
+        if let soundURL = Bundle.main.url(forResource: "kazutora", withExtension: "mp3") {
+            do {
+                kazutorasound = try AVAudioPlayer(contentsOf: soundURL)
+                kazutorasound?.play()
+            } catch {
+                print("error")
+            }
+        }
+    }
+    
+    @IBAction func btnAction3(sender: UIButton) {
+        if let soundURL = Bundle.main.url(forResource: "tihuyu", withExtension: "mp3") {
+            do {
+                chihuyusound = try AVAudioPlayer(contentsOf: soundURL)
+                chihuyusound?.play()
+            } catch {
+                print("error")
+            }
+        }
     }
     
     /*

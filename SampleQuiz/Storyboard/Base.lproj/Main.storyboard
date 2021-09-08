@@ -93,7 +93,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="55"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                        <state key="normal" title="スタート">
+                                        <state key="normal" title="選択肢1">
                                             <color key="titleColor" systemColor="systemGray6Color"/>
                                         </state>
                                         <connections>
@@ -104,7 +104,7 @@
                                         <rect key="frame" x="0.0" y="65" width="295" height="55"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                        <state key="normal" title="スタート">
+                                        <state key="normal" title="選択肢2">
                                             <color key="titleColor" systemColor="systemGray6Color"/>
                                         </state>
                                         <connections>
@@ -116,7 +116,7 @@
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                         <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal" title="スタート">
+                                        <state key="normal" title="選択肢3">
                                             <color key="titleColor" systemColor="systemGray6Color"/>
                                         </state>
                                         <connections>
@@ -127,7 +127,7 @@
                                         <rect key="frame" x="0.0" y="195" width="295" height="55"/>
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
-                                        <state key="normal" title="スタート">
+                                        <state key="normal" title="選択肢4">
                                             <color key="titleColor" systemColor="systemGray6Color"/>
                                         </state>
                                         <connections>
@@ -138,25 +138,21 @@
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bfZ-VI-DrV">
                                 <rect key="frame" x="0.0" y="76" width="375" height="313"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="313" id="9wj-gv-zh3"/>
-                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8z8-Aj-HqZ"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="bfZ-VI-DrV" firstAttribute="leading" secondItem="8z8-Aj-HqZ" secondAttribute="leading" id="2e1-p0-uIy"/>
-                            <constraint firstItem="8z8-Aj-HqZ" firstAttribute="bottom" secondItem="bfZ-VI-DrV" secondAttribute="bottom" constant="278" id="4kW-Ic-5io"/>
                             <constraint firstItem="8z8-Aj-HqZ" firstAttribute="bottom" secondItem="YeE-L5-RTe" secondAttribute="bottom" constant="60" id="AEz-si-cxH"/>
-                            <constraint firstItem="bfZ-VI-DrV" firstAttribute="top" secondItem="8z8-Aj-HqZ" secondAttribute="top" constant="76" id="Auk-ru-6Jy"/>
                             <constraint firstItem="6YF-Dx-TFS" firstAttribute="leading" secondItem="8z8-Aj-HqZ" secondAttribute="leading" constant="20" id="BKp-t3-t3q"/>
                             <constraint firstItem="YeE-L5-RTe" firstAttribute="centerX" secondItem="qVl-3L-SvW" secondAttribute="centerX" id="CX4-Jf-2BP"/>
+                            <constraint firstItem="8z8-Aj-HqZ" firstAttribute="bottom" secondItem="bfZ-VI-DrV" secondAttribute="bottom" constant="278" id="Cqx-Ql-qO0"/>
                             <constraint firstItem="2Pc-Av-m1Z" firstAttribute="leading" secondItem="8z8-Aj-HqZ" secondAttribute="leading" constant="20" id="EUR-Fd-Lmg"/>
                             <constraint firstItem="6YF-Dx-TFS" firstAttribute="top" secondItem="2Pc-Av-m1Z" secondAttribute="bottom" constant="12" id="FkR-6z-ntI"/>
-                            <constraint firstItem="6YF-Dx-TFS" firstAttribute="centerX" secondItem="bfZ-VI-DrV" secondAttribute="centerX" id="Gi7-5u-VnJ"/>
+                            <constraint firstItem="bfZ-VI-DrV" firstAttribute="trailing" secondItem="8z8-Aj-HqZ" secondAttribute="trailing" id="MHR-yh-N7r"/>
+                            <constraint firstItem="bfZ-VI-DrV" firstAttribute="leading" secondItem="8z8-Aj-HqZ" secondAttribute="leading" id="Ozj-Rf-gCm"/>
                             <constraint firstItem="YeE-L5-RTe" firstAttribute="top" secondItem="6YF-Dx-TFS" secondAttribute="bottom" constant="45" id="Tp8-H0-7fD"/>
-                            <constraint firstItem="bfZ-VI-DrV" firstAttribute="top" secondItem="8z8-Aj-HqZ" secondAttribute="top" constant="76" id="di9-2t-IXi"/>
+                            <constraint firstItem="bfZ-VI-DrV" firstAttribute="top" secondItem="8z8-Aj-HqZ" secondAttribute="top" constant="76" id="dbQ-55-Clq"/>
                             <constraint firstItem="8z8-Aj-HqZ" firstAttribute="trailing" secondItem="2Pc-Av-m1Z" secondAttribute="trailing" constant="20" id="ghc-zf-Dxp"/>
                             <constraint firstItem="2Pc-Av-m1Z" firstAttribute="top" secondItem="8z8-Aj-HqZ" secondAttribute="top" constant="50" id="hTy-go-BKu"/>
                             <constraint firstItem="8z8-Aj-HqZ" firstAttribute="trailing" secondItem="YeE-L5-RTe" secondAttribute="trailing" constant="40" id="uSr-yx-uzu"/>

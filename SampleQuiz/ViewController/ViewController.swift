@@ -10,6 +10,8 @@ import AVFoundation
 
 class ViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
+    @IBAction func settingButtonAction(_ sender: Any) {
+    }
     
     var mikeysound:AVAudioPlayer?
     var kensound:AVAudioPlayer?

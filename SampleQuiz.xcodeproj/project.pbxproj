@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,7 @@
 		F46779ED26DE3D630046CF58 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46779EC26DE3D630046CF58 /* QuizViewController.swift */; };
 		F46779EF26DE3DC50046CF58 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46779EE26DE3DC50046CF58 /* ScoreViewController.swift */; };
 		F46779F126DE3F900046CF58 /* quiz1.csv in Resources */ = {isa = PBXBuildFile; fileRef = F46779F026DE3F900046CF58 /* quiz1.csv */; };
+		F4E76CE22705BEBF0027F3CE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E76CE12705BEBE0027F3CE /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		F46779EC26DE3D630046CF58 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		F46779EE26DE3DC50046CF58 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		F46779F026DE3F900046CF58 /* quiz1.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = quiz1.csv; sourceTree = "<group>"; };
+		F4E76CE12705BEBE0027F3CE /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		F44CB3AA26E76DD100274C03 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F4E76CE12705BEBE0027F3CE /* SettingViewController.swift */,
 				F46779DC26DE3BD50046CF58 /* ViewController.swift */,
 				F456EEC726DEA6180012CF93 /* SelectViewController.swift */,
 				F46779EE26DE3DC50046CF58 /* ScoreViewController.swift */,
@@ -219,7 +222,7 @@
 				};
 			};
 			buildConfigurationList = F46779D026DE3BD50046CF58 /* Build configuration list for PBXProject "SampleQuiz" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -315,6 +318,7 @@
 				F46779EF26DE3DC50046CF58 /* ScoreViewController.swift in Sources */,
 				F46779DB26DE3BD50046CF58 /* SceneDelegate.swift in Sources */,
 				F456EEC826DEA6180012CF93 /* SelectViewController.swift in Sources */,
+				F4E76CE22705BEBF0027F3CE /* SettingViewController.swift in Sources */,
 				F46779ED26DE3D630046CF58 /* QuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

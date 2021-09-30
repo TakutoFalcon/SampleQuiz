@@ -17,6 +17,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var answerButton3: UIButton!
     @IBOutlet weak var answerButton4: UIButton!
     @IBOutlet weak var judgeImageView: UIImageView!
+    @IBOutlet weak var countDownLabel: UILabel!
     
     var correctSound:AVAudioPlayer?
     var incorrectSound:AVAudioPlayer?
@@ -27,9 +28,25 @@ class QuizViewController: UIViewController {
     var quizCount = 0
     var correctCount = 0
     var selectLebel = 0
+    // タイマーの変数を作成
+    var timer : Timer?
+    // カウント(経過時間)の変数を作成
+    var count = 0
+    // 設定値を扱うキーを設定
+    let settingKey = "timer_value"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // UserDefaultsのインスタンスを生成
+        let settings = UserDefaults.standard
+        // UserDefaultsに初期値を登録
+        settings.register(defaults: [settingKey:10])
+        // タイマーをスタート
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                     target: self,
+                                     selector: #selector(self.timerInterrupt(_:)),
+                                     userInfo: nil,
+                                     repeats: true)
         
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         bannerView.adUnitID = "ca-app-pub-3940256899942544/2934735716"
@@ -72,6 +89,12 @@ class QuizViewController: UIViewController {
     }
     
     @IBAction func btnAction(sender: UIButton) {
+        if let nowTimer = timer {
+            if nowTimer.isValid == true {
+                nowTimer.invalidate()
+            }
+        }
+        
         if sender.tag == Int(quizArray[1]) {
             if let soundURL = Bundle.main.url(forResource: "correctSound", withExtension: "mp3") {
                 do {
@@ -84,6 +107,13 @@ class QuizViewController: UIViewController {
             print("正解")
             correctCount += 1
             judgeImageView.image = UIImage(named: "correct")
+            count = 0
+            timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                         target: self,
+                                         selector: #selector(self.timerInterrupt(_:)),
+                                         userInfo: nil,
+                                         repeats: true)
+            
         } else {
             if let soundURL = Bundle.main.url(forResource: "IncorrectSound", withExtension: "mp3") {
                 do {
@@ -95,6 +125,12 @@ class QuizViewController: UIViewController {
             }
             print("不正解")
             judgeImageView.image = UIImage(named: "incorrect")
+            count = 0
+            timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                         target: self,
+                                         selector: #selector(self.timerInterrupt(_:)),
+                                         userInfo: nil,
+                                         repeats: true)
         }
         print("スコア: \(correctCount)")
         judgeImageView.isHidden = false
@@ -123,6 +159,34 @@ class QuizViewController: UIViewController {
             answerButton3.setTitle(quizArray[4], for: .normal)
             answerButton4.setTitle(quizArray[5], for: .normal)
         } else {
+            performSegue(withIdentifier: "toScoreVC", sender: nil)
+        }
+    }
+    
+    // 画面の更新をする(戻り値：remainCount:残り時間)
+    func displayUpdate() -> Int {
+        // UserDefaultsのインスタンスを生成
+        let settings = UserDefaults.standard
+        // 取得した秒数をtimerValueに渡す
+        let timerValue = settings.integer(forKey: settingKey)
+        // 残り時間(remainCount)を生成
+        let remainCount = timerValue - count
+        // remainCount(残りの時間)をラベルに表示
+        countDownLabel.text = "残り\(remainCount)秒"
+        // 残り時間を戻り値に設定
+        return remainCount
+        
+    }
+    
+    // 経過時間の処理
+    @objc func timerInterrupt(_ timer:Timer) {
+        // count(経過時間)に+1していく
+        count += 1
+        // remainCount(残り時間)が0以下のとき、タイマーを止める
+        if displayUpdate() <= 0 {
+            // 初期化処理
+            count = 0
+            // スコア画面への遷移
             performSegue(withIdentifier: "toScoreVC", sender: nil)
         }
     }
